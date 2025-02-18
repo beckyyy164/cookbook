@@ -1,0 +1,74 @@
+<!--GOAL: make a "website" to gather all my favourite recipes
+Maybe with ratings
+and two sections, one for have tried recipes, and one for the ones i want to try-->
+
+<!DOCTYPE html>
+<html>
+
+<header>
+<title>Rebeccas crazy kitchen</title>
+<h1>Rebeccas crazy kitchen</h1>
+</header>
+
+<body>
+<main>
+
+<section>
+	<a href="have tried.html">
+	<h1>The recipes I have tried before</h1></a>
+</section>
+
+<section>
+	<a href="havent tried.html">
+	<h1>My recipe wish list</h1></a>
+</section>
+
+<!--change the links and text later, im just testing and learning-->
+<h3>Honorable mentions:</h3>
+	<ul>
+		<li><a target="_blank" href="https://www.valdemarsro.dk/">Valdemarsro</a></li>
+		<li><a target="_blank" href="https://www.valdemarsro.dk/groentsagsbiksemad/">some biksemad, mums</a></li>
+	</ul>
+
+	<img 
+		src="https://i.pinimg.com/736x/20/41/ef/2041ef4f9574e1a4f82d82dc63f693fc.jpg"
+		alt="Girl cooking with a cookbook"/>
+
+</main>
+
+<!--TO DO: ADD FORM
+for now this does nothing, but in the future, i would like it to actually add a link to the list in real time :)
+also, if you could learn how this works and explain it to me, that would be nice, thanks
+would be neat if:
+RADIO BUTTONS - tried/not tried
+URL submit form 
+then adds the URL to a textfile or something on the server/my computer(since i dont have a server)
+-->
+
+<form action="save_data.php" method="POST">
+	<legend>Have you stumbled upon a new recipe? Submit it here:</legend>
+	<input type="text" name="recipeurl" placeholder="(insert link here)" required> 
+	
+	<br>
+	<fieldset>
+		<legend>Have you tried it?</legend>
+		<label><input type="radio" id="tried" name="add recipe" value="tried"> Tried</label><br>
+		<label><input type="radio" id="nottried" name="add recipe" value="nottried"> Haven't Tried</label>
+	</fieldset>
+	<fieldset>
+		<legend>What category is the recipe in?:</legend>
+		<label><input type="radio" id="breakfast" name="category" value="breakfast"> Breakfast</label><br>
+		<label><input type="radio" id="lunch" name="category" value="lunch"> Lunch</label><br>
+		<label><input type="radio" id="dinner" name="category" value="dinner"> Dinner</label><br>
+		<label><input type="radio" id="dessert" name="category" value="dessert"> Dessert</label><br>
+		<label><input type="radio" id="snack" name="category" value="snack"> Snack</label><br>
+	</fieldset>
+	<br>
+	<legend>How would you rate it?</legend>
+	<input type="text" name="rating" placeholder="0/10" required>
+	<button type="submit">Submit</button> <button type="reset">Clear</button>
+</form>
+
+
+</body>
+</html>
